@@ -1,0 +1,23 @@
+{
+  "name": "eric-leah",
+  "description": "Private bloggy about us",
+  "version": "0.0.0",
+  "author": "Eric Liang <etlgfx@gmail.com>",
+  "keywords": [ ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/etlgfx/eric-leah.git"
+  },
+  "dependencies": {
+    "backbone": "*",
+    "browserify": "*",
+    "gulp": "*",
+    "gulp-browserify": "*"
+  },
+  "devDependencies": {
+    "mocha": "1.20.x"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  }
+}

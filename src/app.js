@@ -28,6 +28,7 @@ app.use(function (req, res, next) {
     console.log(Date.now() +' - '+ req.method +':'+ req.url);
     next();
 });
+app.use(express.static('public'));
 
 app.use(expressSession({
     secret: 'whatever',
