@@ -3,26 +3,27 @@
   "description": "Private bloggy about us",
   "version": "0.0.0",
   "author": "Eric Liang <etlgfx@gmail.com>",
-  "keywords": [ ],
+  "keywords": [],
   "repository": {
     "type": "git",
     "url": "https://github.com/etlgfx/eric-leah.git"
   },
   "dependencies": {
-    "express": "*",
-    "express-session": "*",
-    "js-tweaker": "*",
-    "passport": "*",
-    "passport-twitter": "*",
     "backbone": "*",
     "browserify": "*",
-    "jquery": "*"
+    "express": "*",
+    "express-session": "*",
+    "jquery": "*",
+    "js-tweaker": "*",
+    "mongoose": "^3.8.17",
+    "passport": "*",
+    "passport-twitter": "*"
   },
   "devDependencies": {
     "mocha": "1.20.x"
   },
   "engines": {
-    "node": ">= 0.10.0"
+    "node": "^0.10.0"
   },
   "scripts": {
     "test": "mocha -R spec --recursive test"
