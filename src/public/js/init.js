@@ -1,13 +1,14 @@
 require.config({
     'deps': ['main'],
-    baseUrl: '/js/',
+    'baseUrl': '/js/',
     'paths': {
-        'marionette': '/vendors/backbone.marionette/lib/backbone.marionette', //marionette package includes deprecated wreqr
-        'zepto': '/vendors/zepto/zepto',
         'backbone': '/vendors/backbone/backbone',
+        'deferred': '/vendors/simply-deferred/deferred',
         'lodash': '/vendors/lodash/dist/lodash',
+        'marionette': '/vendors/backbone.marionette/lib/backbone.marionette', //marionette package includes deprecated wreqr
         'moment': '/vendors/moment/moment',
         'text': '/vendors/requirejs-text/text',
+        'zepto': '/vendors/zepto/zepto',
     },
     'map': {
         '*': {
@@ -19,13 +20,19 @@ require.config({
         'lodash': {
             'exports': '_',
         },
+        'zepto': {
+            'exports': '$',
+        },
+        'deferred': {
+            'deps': ['zepto'],
+        },
         'backbone': {
             'exports': 'Backbone',
             'deps': ['zepto', 'lodash'],
         },
         'marionette': {
             'exports': 'Backbone.Marionette',
-            'deps': ['backbone'],
+            'deps': ['backbone', 'deferred'],
         },
     }
 });
