@@ -1,5 +1,10 @@
-var Backbone = require('backbone');
+define([
+    'backbone'
+], function (Backbone) {
+    var User = Backbone.Model.extend({
 
-var User = Backbone.Model.extend({
+    });
 
+    return User;
 });
+

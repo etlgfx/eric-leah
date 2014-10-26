@@ -1,4 +1,4 @@
-require([
+define([
     'backbone', 
     'marionette',
 ], function (Backbone, Marionette) {
@@ -11,6 +11,10 @@ require([
 
     App.on('start', function () {
         Backbone.history.start();
+    });
+
+    App.addRegions({
+        site: '#site'
     });
 
     return App;
