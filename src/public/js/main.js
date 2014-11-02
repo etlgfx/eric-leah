@@ -1,21 +1,23 @@
 define([
-    'backbone', 
+    'backbone',
     'marionette',
-], function (Backbone, Marionette) {
+    'router',
+], function (Backbone, Marionette, Router) {
 
     "use strict";
 
-    var App = new Backbone.Marionette.Application();
+    var App = new Backbone.Marionette.Application({
+    });
 
-    App.start();
+    App.addInitializer(function (options) {
+        new Router();
+    });
 
     App.on('start', function () {
         Backbone.history.start();
     });
 
-    App.addRegions({
-        site: '#site'
-    });
+    App.start();
 
-    return App;
+    return App; //unnecessary
 });

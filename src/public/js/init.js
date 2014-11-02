@@ -1,6 +1,5 @@
 require.config({
     'deps': ['main'],
-    'baseUrl': '/js/',
     'paths': {
         'backbone': '/vendors/backbone/backbone',
         'deferred': '/vendors/simply-deferred/deferred',

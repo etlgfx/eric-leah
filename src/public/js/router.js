@@ -1,6 +1,15 @@
-"use strict";
+define([
+    'backbone',
+    'marionette',
+    'controllers/blog',
+], function (Backbone, Marionette, Controller) {
 
-var $ = require('jquery')(window),
-    Backbone = require('backbone');
+    "use strict";
 
-module.exports = Backbone.Router;
+    return Backbone.Marionette.AppRouter.extend({
+        controller: Controller,
+        appRoutes: {
+            'blog': 'index',
+        }
+    });
+});
